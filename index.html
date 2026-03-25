@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Paul Gosling</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #222;
+      background: #f9f9f7;
+      line-height: 1.7;
+    }
+
+    /* ── Header / banner ─────────────────────────────────────── */
+    header {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #9ab8d4;
+      background: #2d5a8a;
+    }
+
+    header .intro h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+    }
+
+    header .intro p {
+      margin-top: 0.3rem;
+      font-size: 1.05rem;
+      color: #c6daea;
+    }
+
+    /* ── Navigation ──────────────────────────────────────────── */
+    nav {
+      background: #14304f;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 1.5rem;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 0.75rem 1.1rem;
+      color: #c6daea;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav ul li a:hover { color: #fff; }
+
+    /* ── Main layout ─────────────────────────────────────────── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    section { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-size: 1.35rem;
+      color: #1a3a5c;
+      border-bottom: 2px solid #1a3a5c;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── About ───────────────────────────────────────────────── */
+    #about p { margin-bottom: 0.8rem; }
+
+    /* ── Research interests ──────────────────────────────────── */
+    #research ul {
+      list-style: disc;
+      padding-left: 1.4rem;
+    }
+
+    #research ul li { margin-bottom: 0.35rem; }
+
+    /* ── Publications ────────────────────────────────────────── */
+    .pub-list { list-style: none; }
+
+    .pub-list li {
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .pub-list li:last-child { border-bottom: none; }
+
+    .pub-list .pub-title {
+      font-style: italic;
+      color: #1a3a5c;
+    }
+
+    .pub-list .pub-meta {
+      font-size: 0.88rem;
+      color: #555;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Teaching ────────────────────────────────────────────── */
+    #teaching ul {
+      list-style: disc;
+      padding-left: 1.4rem;
+    }
+
+    #teaching ul li { margin-bottom: 0.35rem; }
+
+    /* ── Contact ─────────────────────────────────────────────── */
+    #contact address {
+      font-style: normal;
+      line-height: 1.9;
+    }
+
+    #contact a { color: #1a3a5c; }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      background: #1a3a5c;
+      color: #8aafc8;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.82rem;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      header img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────── -->
+  <header>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Crect width='130' height='130' fill='%232d5a8a'/%3E%3Ccircle cx='65' cy='50' r='28' fill='%23a0b8cc'/%3E%3Cellipse cx='65' cy='115' rx='45' ry='35' fill='%23a0b8cc'/%3E%3C/svg%3E" alt="Photo of John Paul Gosling (placeholder)" />
+    <div class="intro">
+      <h1>John Paul Gosling</h1>
+      <p>Statistician &nbsp;|&nbsp; [Institution] &nbsp;|&nbsp; [Department]</p>
+    </div>
+  </header>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Main content ────────────────────────────────────────── -->
+  <main class="container">
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Welcome to my homepage. I am a statistician with interests in applied and
+        theoretical statistics. My work focuses on developing and applying
+        statistical methodology to real-world problems, with particular emphasis
+        on [research area placeholder].
+      </p>
+      <p>
+        I hold a position at [Institution] in the [Department]. Previously I was
+        at [Previous Institution]. I completed my PhD at [University] in [Year].
+      </p>
+    </section>
+
+    <!-- Research interests -->
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Bayesian statistics and computation</li>
+        <li>Uncertainty quantification</li>
+        <li>Statistical emulation of computer models</li>
+        <li>Environmental and ecological statistics</li>
+        <li>[Additional research interest]</li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <div class="pub-title">Title of paper one</div>
+          <div class="pub-meta">J. P. Gosling, Co-Author. <em>Journal Name</em>, vol. X, pp. 1–20, Year.</div>
+        </li>
+        <li>
+          <div class="pub-title">Title of paper two</div>
+          <div class="pub-meta">J. P. Gosling, Co-Author. <em>Journal Name</em>, vol. X, pp. 21–40, Year.</div>
+        </li>
+        <li>
+          <div class="pub-title">Title of paper three</div>
+          <div class="pub-meta">J. P. Gosling, Co-Author. <em>Journal Name</em>, vol. X, pp. 41–60, Year.</div>
+        </li>
+      </ul>
+      <p style="margin-top:0.8rem; font-size:0.9rem;">
+        A full list of publications is available on
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul>
+        <li>Module 1: [Course name] &mdash; [Level], [Institution]</li>
+        <li>Module 2: [Course name] &mdash; [Level], [Institution]</li>
+        <li>Module 3: [Course name] &mdash; [Level], [Institution]</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <address>
+        John Paul Gosling<br />
+        [Department]<br />
+        [Institution]<br />
+        [City, Country]<br />
+        <br />
+        Email: <a href="mailto:j.p.gosling@institution.ac.uk">j.p.gosling@institution.ac.uk</a>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    &copy; <span id="yr"></span> John Paul Gosling &mdash; page under construction
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
