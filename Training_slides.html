@@ -1154,6 +1154,7 @@ small.</p>
 at two levels of stringency, then compare the results to the plug-in
 value.</p>
 </div>
+<div class="fragment">
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>); N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>E_1 <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(N, <span class="at">shape =</span> <span class="dv">2</span>, <span class="at">scale =</span> <span class="dv">1</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>E_2 <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(N, <span class="at">shape =</span> <span class="dv">3</span>, <span class="at">scale =</span> <span class="dv">1</span>)</span>
@@ -1163,6 +1164,7 @@ value.</p>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>cons_99 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(E_1, <span class="fl">0.99</span>) <span class="sc">+</span> <span class="fu">quantile</span>(E_2, <span class="fl">0.99</span>) <span class="sc">-</span> <span class="fu">quantile</span>(H, <span class="fl">0.01</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">plug_in =</span> <span class="sc">-</span><span class="dv">16</span>, <span class="at">cons_95 =</span> cons_95, <span class="at">cons_99 =</span> cons_99)</span></code></pre></div>
+</div>
 </section>
 <section id="exercise-2-solution" class="slide level2" data-background="#0d1b2a">
 <h2 data-background="#0d1b2a">Exercise 2: solution</h2>
@@ -1777,8 +1779,6 @@ exposed?</p></li>
 <div class="q-box">
 <p><strong>Group reflection.</strong></p>
 <ol type="1">
-<li><p>What is the single most useful thing you will take from today’s
-session? How might it change how you approach a piece of work?</p></li>
 <li><p>What remains the most significant barrier to using quantitative
 methods more rigorously in your own work: data, expertise, time,
 institutional support or something else?</p></li>
