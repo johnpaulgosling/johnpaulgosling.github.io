@@ -4,149 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Paul Gosling</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #222;
-      background: #f9f9f7;
-      line-height: 1.7;
-    }
-
-    /* ── Header / banner ─────────────────────────────────────── */
-    header {
-      background: #1a3a5c;
-      color: #fff;
-      padding: 2.5rem 2rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #9ab8d4;
-      background: #2d5a8a;
-    }
-
-    header .intro h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      letter-spacing: 0.02em;
-    }
-
-    header .intro p {
-      margin-top: 0.3rem;
-      font-size: 1.05rem;
-      color: #c6daea;
-    }
-
-    /* ── Navigation ──────────────────────────────────────────── */
-    nav {
-      background: #14304f;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 1.5rem;
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 0.75rem 1.1rem;
-      color: #c6daea;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    nav ul li a:hover { color: #fff; }
-
-    /* ── Main layout ─────────────────────────────────────────── */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-    }
-
-    section { margin-bottom: 2.5rem; }
-
-    h2 {
-      font-size: 1.35rem;
-      color: #1a3a5c;
-      border-bottom: 2px solid #1a3a5c;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      font-weight: normal;
-      letter-spacing: 0.03em;
-    }
-
-    /* ── About ───────────────────────────────────────────────── */
-    #about p { margin-bottom: 0.8rem; }
-
-    /* ── Research interests ──────────────────────────────────── */
-    #research ul {
-      list-style: disc;
-      padding-left: 1.4rem;
-    }
-
-    #research ul li { margin-bottom: 0.35rem; }
-
-    /* ── Publications ────────────────────────────────────────── */
-    .pub-list { list-style: none; }
-
-    .pub-list li {
-      padding: 0.7rem 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .pub-list li:last-child { border-bottom: none; }
-
-    .pub-list .pub-title {
-      font-style: italic;
-      color: #1a3a5c;
-    }
-
-    .pub-list .pub-meta {
-      font-size: 0.88rem;
-      color: #555;
-      margin-top: 0.1rem;
-    }
-
-    /* ── Contact ─────────────────────────────────────────────── */
-    #contact address {
-      font-style: normal;
-      line-height: 1.9;
-    }
-
-    #contact a { color: #1a3a5c; }
-
-    /* ── Footer ──────────────────────────────────────────────── */
-    footer {
-      background: #1a3a5c;
-      color: #8aafc8;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.82rem;
-      font-family: Arial, sans-serif;
-    }
-
-    /* ── Responsive ──────────────────────────────────────────── */
-    @media (max-width: 600px) {
-      header { flex-direction: column; text-align: center; }
-      header img { width: 100px; height: 100px; }
-    }
-  </style>
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
@@ -162,89 +20,93 @@
   <!-- ── Navigation ──────────────────────────────────────────── -->
   <nav aria-label="Primary navigation">
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="r-packages.html">R Packages</a></li>
     </ul>
   </nav>
 
   <!-- ── Main content ────────────────────────────────────────── -->
   <main class="container">
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
+    <!-- Quote -->
+    <blockquote class="quote-block">
+      &ldquo;It is utterly implausible that a mathematical formula should make the future known to us,
+      and those who think it can would once have believed in witchcraft.&rdquo;
+      <cite>Jakob Bernoulli (1655&ndash;1705), <em>Ars Conjectandi</em> (1713)</cite>
+    </blockquote>
+
+    <!-- Quick links -->
+    <div class="quick-links" aria-label="External profiles">
+      <a href="publications.html">Publications</a>
+      <a href="https://scholar.google.co.uk/citations?user=CqRuUXYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/John_Paul_Gosling" target="_blank" rel="noopener">ResearchGate</a>
+      <a href="r-packages.html">R Packages</a>
+      <a href="https://www.durham.ac.uk/staff/john-paul-gosling/" target="_blank" rel="noopener">Durham website</a>
+    </div>
+
+    <!-- Biographical information -->
+    <section id="bio">
+      <h2>Biographical Information</h2>
       <p>
-        Welcome to my homepage. I am a Professor of Statistics in the
-        <a href="https://www.durham.ac.uk/departments/academic/mathematical-sciences/" target="_blank" rel="noopener">Department of Mathematical Sciences</a>
-        at Durham University. My research focuses on developing and applying
-        Bayesian statistical methodology to real-world problems, with particular
-        emphasis on uncertainty quantification, expert elicitation, and the
-        statistical analysis of computer models.
+        I specialise in bridging the divide between expert knowledge and analytical application,
+        ensuring qualitative insights are fully leveraged by quantitative modellers and key decision
+        makers. I have applied this skill across diverse sectors, including government policy,
+        industrial planning, and scientific discovery, to transform complex information into
+        strategic value.
       </p>
       <p>
-        I am one of the developers of
-        <a href="https://www.sheffield.ac.uk/mash/statistics-courses/online-learning/shelf" target="_blank" rel="noopener">SHELF</a>
-        (the SHeffield ELicitation Framework), a toolkit for eliciting
-        probability distributions from subject-matter experts. Before joining
-        Durham, I held positions at the University of Leeds and completed my
-        PhD at the University of Sheffield.
+        More generally, I am an applied statistician with experience in developing novel statistical
+        methods within a Bayesian framework. Immediately before joining Durham in 2022, I worked for
+        two-and-a-half years in industry modelling large-scale flood events for JBA Risk Management
+        Ltd. Until late 2019, I was an associate professor of statistics and director of research and
+        innovation in the School of Mathematics at the University of Leeds. I also provide consultancy
+        services on Bayesian statistics, expert elicitation and accounting for uncertainty.
+      </p>
+      <p>
+        Before joining Leeds, I spent three years as a civil servant at the Food and Environment
+        Research Agency. My role there was to develop new methodologies to help characterise and
+        propagate uncertainties in risk assessments.
+      </p>
+      <p>
+        My formal training in statistics took place at the University of York, with Peter Lee teaching
+        many of my undergraduate statistics courses, and then at the University of Sheffield under the
+        supervision of Jeremy Oakley and Tony O&rsquo;Hagan. For the latter, I spent three years as a
+        PhD student and three years as a postdoctoral researcher working on expert elicitation and
+        analysing complex computer models. Even further back, before taking up my PhD position, I
+        almost turned my back on studying altogether to become a pub landlord (that is a different
+        story&hellip).
       </p>
     </section>
 
     <!-- Research interests -->
     <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Bayesian statistics and computation</li>
-        <li>Uncertainty quantification</li>
-        <li>Statistical emulation of computer models</li>
-        <li>Expert elicitation and the SHELF framework</li>
-        <li>Environmental and ecological statistics</li>
-        <li>Risk and decision analysis</li>
-      </ul>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul class="pub-list">
-        <li>
-          <div class="pub-title">SHELF: The SHeffield ELicitation Framework</div>
-          <div class="pub-meta">J. P. Gosling. In Dias, L. C., Morton, A., Quigley, J. (eds) <em>Elicitation: The Science and Art of Structuring Judgement</em>. Springer, 2018, pp. 61–93.</div>
-        </li>
-        <li>
-          <div class="pub-title">Nonparametric elicitation for heavy-tailed prior distributions</div>
-          <div class="pub-meta">J. P. Gosling, J. E. Oakley, A. O'Hagan. <em>Bayesian Analysis</em>, 2(4), 693–718, 2007.</div>
-        </li>
-        <li>
-          <div class="pub-title">A Bayes linear approach to weight-of-evidence risk assessment for skin allergy</div>
-          <div class="pub-meta">J. P. Gosling, A. Hart, D. Owen, M. Davies, T. Z. Husain, J. Pratt. <em>Bayesian Analysis</em>, 8(1), 169–186, 2013.</div>
-        </li>
-      </ul>
-      <p style="margin-top:0.8rem; font-size:0.9rem;">
-        A full list of publications is available on
-        <a href="https://scholar.google.co.uk/citations?user=CqRuUXYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        and on my
-        <a href="https://www.durham.ac.uk/staff/john-paul-gosling/" target="_blank" rel="noopener">Durham staff profile</a>.
+      <h2>Current Research Interests</h2>
+      <p style="margin-bottom:0.7rem;">
+        My research to date has focused on what to do in situations where data are sparse: how can we
+        use computer simulators and expert knowledge when making decisions? In particular, I have
+        looked at:
       </p>
-    </section>
-
-    <!-- Teaching -->
-    <!-- (Teaching section removed as requested) -->
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <address>
-        John Paul Gosling<br />
-        Department of Mathematical Sciences<br />
-        Durham University<br />
-        Durham, DH1 3LE, UK<br />
-        <br />
-        Email: <a href="mailto:john-paul.gosling@durham.ac.uk">john-paul.gosling@durham.ac.uk</a>
-      </address>
+      <ul>
+        <li>
+          Structured elicitation of expert beliefs and the potential for large language models in
+          helping experts to make judgements;
+        </li>
+        <li>Uncertainty and sensitivity analysis of complex computer models;</li>
+        <li>Robustness of Bayesian inference to changes in the model specification
+          (see <a href="https://projecteuclid.org/euclid.ba/1340371036" target="_blank" rel="noopener">Michael Goldstein&rsquo;s 2006 article</a>
+          for the standpoint I find most compelling);
+        </li>
+        <li>Modelling of preferences through networks (specifically CP-nets).</li>
+      </ul>
+      <p style="margin-top:0.7rem;">
+        This list is not exhaustive, and I am particularly interested in pursuing methodological
+        developments that will help to increase the uptake of the Bayesian and subjectivist
+        standpoints. Much of my previous research was motivated by the reduction of the use of animals
+        in toxicological risk assessment. I was the principal investigator on the NC3Rs- and
+        EPSRC-funded project &ldquo;Uncertainty and confidence in applying mathematical models and
+        <em>in vitro</em> data in toxicological safety assessments&rdquo;.
+      </p>
     </section>
 
   </main>
@@ -254,9 +116,7 @@
     &copy; <span id="yr"></span> John Paul Gosling &mdash; Durham University
   </footer>
 
-  <script>
-    document.getElementById("yr").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Paul Gosling &ndash; R Packages</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────── -->
+  <header>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Crect width='130' height='130' fill='%232d5a8a'/%3E%3Ccircle cx='65' cy='50' r='28' fill='%23a0b8cc'/%3E%3Cellipse cx='65' cy='115' rx='45' ry='35' fill='%23a0b8cc'/%3E%3C/svg%3E" alt="Photo of John Paul Gosling" />
+    <div class="intro">
+      <h1>John Paul Gosling</h1>
+      <p>Professor of Statistics &nbsp;|&nbsp; Department of Mathematical Sciences &nbsp;|&nbsp; Durham University</p>
+    </div>
+  </header>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="r-packages.html" aria-current="page">R Packages</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Main content ────────────────────────────────────────── -->
+  <main class="container">
+
+    <section>
+      <h2>R Packages</h2>
+
+      <!-- AddiVortes -->
+      <div class="pkg-card">
+        <h3>(Bayesian) Additive Voronoi Tessellations &mdash; AddiVortes</h3>
+        <p>
+          Implements the Bayesian Additive Voronoi Tessellation (AddiVortes) model for
+          non-parametric regression and classification. This package allows users to find the
+          model posterior distributions and make subsequent predictions. It is particularly useful
+          for spatial data analysis and complex function approximation where the underlying
+          structure is unknown.
+        </p>
+        <div class="pkg-links">
+          <a href="https://github.com/johnpaulgosling/AddiVortes" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://johnpaulgosling.github.io/AddiVortes/" target="_blank" rel="noopener">Package website</a>
+          <a href="https://cran.r-project.org/web/packages/AddiVortes/index.html" target="_blank" rel="noopener">CRAN</a>
+        </div>
+      </div>
+
+      <!-- BayesLinearKinematics -->
+      <div class="pkg-card">
+        <h3>Bayes Linear Kinematics &mdash; BayesLinearKinematics</h3>
+        <p>
+          Implementation of Bayes linear (kinematic) adjustments as in Goldstein and Shaw (2004)
+          and Goldstein and Wooff (2006).
+        </p>
+        <div class="pkg-links">
+          <a href="https://github.com/johnpaulgosling/BayesLinearKinematics" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://johnpaulgosling.github.io/BayesLinearKinematics/" target="_blank" rel="noopener">Package website</a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    &copy; <span id="yr"></span> John Paul Gosling &mdash; Durham University
+  </footer>
+
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
